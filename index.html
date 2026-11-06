@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 50% 40%, rgba(108,63,160,0.55), rgba(36,21,54,0.96) 70%);
+    background: radial-gradient(circle at 50% 40%, rgba(156,123,255,0.18), rgba(5,11,20,0.96) 70%);
     backdrop-filter: blur(3px);
     
     -webkit-backdrop-filter: blur(3px);
@@ -288,7 +288,7 @@
         <span class="tile-go" aria-hidden="true">&rarr;</span>
       </button>
 
-      <button class="tile" data-key="events" style="--i:4" onclick="window.location.href='https://cheryljoehub.github.io/event_2/'">
+      <button class="tile" data-key="events" style="--i:4" onclick="window.location.href='https://cheryljoehub.github.io/updatedevent/'">
         <span class="tile-icon" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="14" width="44" height="40" rx="4" stroke="currentColor" stroke-width="3"/>
@@ -356,15 +356,24 @@
         </button>
         <h1 id="booking-title">Book the Studio</h1>
       </header>
+      <a
+        class="booking-qr"
+        href="https://docs.google.com/forms/d/e/1FAIpQLScCXLekxeXQZ9nr9yfXqevoK1ptDIt-G8KqH90XU6fLcV2JeQ/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open the Studio 42 booking form on another device">
+        <img src="images/studio-booking-qr.svg" alt="QR code for the Studio 42 booking form">
+        <span>Scan to open form</span>
+      </a>
       <form class="booking-form" id="booking-form" novalidate>
         <p class="booking-intro">Tell us a little about your project and how Studio 42 can help. This initial inquiry helps us understand your needs and determine the appropriate next steps. You may be asked to complete a more detailed service-specific form after your inquiry is reviewed.</p>
 
         <fieldset class="booking-group">
           <legend>Contact Information</legend>
-          <label class="booking-question">First Name <span>*</span><input class="booking-text-input" data-entry="1750641975" data-required="true" readonly autocomplete="off"></label>
-          <label class="booking-question">Last Name <span>*</span><input class="booking-text-input" data-entry="651755973" data-required="true" readonly autocomplete="off"></label>
-          <label class="booking-question">Email Address <span>*</span><input class="booking-text-input" data-entry="726088984" data-required="true" data-input-type="email" readonly autocomplete="off"></label>
-          <label class="booking-question">Phone Number<input class="booking-text-input" data-entry="1822763170" data-input-type="tel" readonly autocomplete="off"></label>
+          <label class="booking-question">First Name <span>*</span><input class="booking-text-input" data-entry="1750641975" data-required="true" data-keyboard-mode="letters" readonly autocomplete="off"></label>
+          <label class="booking-question">Last Name <span>*</span><input class="booking-text-input" data-entry="651755973" data-required="true" data-keyboard-mode="letters" readonly autocomplete="off"></label>
+          <label class="booking-question">Email Address <span>*</span><input class="booking-text-input" data-entry="726088984" data-required="true" data-input-type="email" data-keyboard-mode="email" readonly autocomplete="off"></label>
+          <label class="booking-question">Phone Number<input class="booking-text-input" data-entry="1822763170" data-input-type="tel" data-keyboard-mode="numeric" readonly autocomplete="off"></label>
           <label class="booking-question">Organization / Department / Club / Company <span>*</span><span class="booking-help">Enter the department, club, organization, or company you represent</span><input class="booking-text-input" data-entry="1001163247" data-required="true" readonly autocomplete="off"></label>
         </fieldset>
 
